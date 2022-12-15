@@ -9,10 +9,13 @@ if(len(dir) == 0):
     else:
         dir = "/home/Documents/"
 
+# Temp solution, does not use dir
 try:
-    os.makedirs(dir + "ValorantAI")
-    os.makedirs(dir + "ValorantAI/Attack")
-    os.makedirs(dir + "ValorantAI/Defense")
+    os.mkdir("ValorantAI")
+    attack_path = os.path.join("ValorantAI", "Attack")
+    defense_path = os.path.join("ValorantAI", "Defense")
+    os.mkdir(attack_path)
+    os.mkdir(defense_path)
 except FileExistsError:
     pass # Just use existing dirs
 
