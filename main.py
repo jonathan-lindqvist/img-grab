@@ -8,3 +8,11 @@ if(len(dir) == 0):
         dir = "C:\\Documents\\"
     else:
         dir = "/home/Documents/"
+
+try:
+    os.makedirs(dir + "ValorantAI")
+    os.makedirs(dir + "ValorantAI/Attack")
+    os.makedirs(dir + "ValorantAI/Defense")
+except FileExistsError:
+    pass # Just use existing dirs
+
