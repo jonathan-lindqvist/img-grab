@@ -1,5 +1,6 @@
 import os
-import webbrowser
+from selenium.webdriver import Firefox
+from selenium.webdriver.firefox.options import Options
 
 print("What directory should the files be saved to? (Default directory is documents")
 dir = input()
@@ -30,6 +31,7 @@ except FileExistsError:
 # play demo
 # screenshot rounds
 # save into corresponding folder
-webbrowser.open('http://www.python.org', autoraise=False)
+browser = Firefox()
+browser.get("https://google.com")
 
 
