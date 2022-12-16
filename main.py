@@ -1,6 +1,5 @@
 import os
 import webbrowser
-#import pyscreenshot as sc
 
 print("What directory should the files be saved to? (Default directory is documents")
 dir = input()
@@ -32,5 +31,5 @@ except FileExistsError:
 # screenshot rounds
 # save into corresponding folder
 webbrowser.open('http://www.python.org', autoraise=False)
-#im = sc.grab()
-#im.show
+
+
